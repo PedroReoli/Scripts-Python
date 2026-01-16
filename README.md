@@ -1,11 +1,15 @@
-# Scripts Python Úteis
+# Scripts Python
 
-Repositório de scripts Python independentes e úteis para tarefas diversas.
+Repositório de scripts Python para tarefas cotidianas e automações.
 
 ## Estrutura
 
-- `system_specs_scanner.py` - Escaneia as especificações do PC e verifica compatibilidade com jogos/modlists
-- `requirements.txt` - Dependências dos scripts
+```
+scripts/
+├── system/     # Scripts relacionados ao sistema
+├── utils/      # Utilitários gerais
+└── automation/ # Automações
+```
 
 ## Uso
 
@@ -13,12 +17,19 @@ Repositório de scripts Python independentes e úteis para tarefas diversas.
 # Instalar dependências
 pip install -r requirements.txt
 
-# Executar scanner de especificações
-python system_specs_scanner.py
+# Executar scripts
+python scripts/system/system_specs_scanner.py
+python scripts/automation/click_automation.py
 ```
 
-## Descrição dos Scripts
+## Scripts Disponíveis
 
 ### system_specs_scanner.py
-Escaneia hardware e software do sistema, criando um relatório em JSON com todas as especificações e verificação de compatibilidade com requisitos de jogos/modlists.
+Escaneia especificações do sistema e verifica compatibilidade com requisitos de jogos/modlists.
 
+### click_automation.py
+Automação de cliques com interface gráfica:
+- Captura coordenadas pressionando a tecla '0'
+- Configura múltiplos cliques
+- Define delay entre cliques
+- Configura repetições do loop e total de execuções

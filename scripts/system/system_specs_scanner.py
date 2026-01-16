@@ -437,7 +437,10 @@ def scan_system():
 
 def save_to_file(specs, filename="system_specs.json"):
     """Salva as especificações em arquivo JSON"""
-    output_path = Path(filename)
+    # Salvar na pasta output
+    output_dir = Path(__file__).parent.parent.parent / "output"
+    output_dir.mkdir(exist_ok=True)
+    output_path = output_dir / filename
     
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(specs, f, indent=2, ensure_ascii=False)
@@ -484,4 +487,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
